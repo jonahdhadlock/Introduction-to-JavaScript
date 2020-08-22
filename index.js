@@ -79,38 +79,42 @@ console.log(dogFeeder(1, 15));
 
 //options: rock, paper, or scissors;
 //rock beats scissors; scissors beats paper; paper beats rock; 
-let userChoice = prompt("Rock, paper, or scissors?");
+const userChoice = prompt("rock, paper, or scissors?");
 let computerChoice = Math.random();
 if (computerChoice <= .33) {
-    computerChoice = "Rock";
+    computerChoice = "rock";
 } else if (computerChoice <= .66) {
-    computerChoice = "Paper";
+    computerChoice = "paper";
 
 } else {
-    (computerChoice = "Scissors");
+    (computerChoice = "scissors");
 }
 console.log("Computer: " + computerChoice);
 
-let compare = function(userChoice, computerChoice) {
+function whoWins(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
-        return "You tied!";
+        return "It's a tie!";
     } else if (userChoice === "rock") {
+        if (computerChoice === "paper") {
+            return "Computer wins!";
+        } else {
+            return "You win!";
+        }
+    } else if (userChoice === "paper") {
         if (computerChoice === "scissors") {
-            return "Rock wins!";
+            return "Computer wins!";
         } else {
-            return "Paper wins!";
+            return "You win!";
         }
-    } else if (computerChoice === "paper") {
+    } else if (userChoice === "scissors") {
         if (computerChoice === "rock") {
-            return "Paper wins!";
+            return "Computer wins!";
         } else {
-            return "Scissors wins!";
+            return "You win!";
         }
-
     }
-}
-
-compare(userChoice, computerChoice);
+};
+console.log(whoWins(userChoice, computerChoice));
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
