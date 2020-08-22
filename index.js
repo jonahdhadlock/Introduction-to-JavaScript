@@ -76,20 +76,41 @@ console.log(dogFeeder(1, 15));
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
-function rockPaperScissors(option) {
-    if (option <= .3333) {
-        return = "Rock";
-    } else if (option >= .3334 <= .6666) {
-        return = "Paper";
-    } else if (option >= .6667) {
-        return = "Scissors";
+
+//options: rock, paper, or scissors;
+//rock beats scissors; scissors beats paper; paper beats rock; 
+let userChoice = prompt("Rock, paper, or scissors?");
+let computerChoice = Math.random();
+if (computerChoice <= .33) {
+    computerChoice = "Rock";
+} else if (computerChoice <= .66) {
+    computerChoice = "Paper";
+
+} else {
+    (computerChoice = "Scissors");
+}
+console.log("Computer: " + computerChoice);
+
+let compare = function(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        return "You tied!";
+    } else if (userChoice === "rock") {
+        if (computerChoice === "scissors") {
+            return "Rock wins!";
+        } else {
+            return "Paper wins!";
+        }
+    } else if (computerChoice === "paper") {
+        if (computerChoice === "rock") {
+            return "Paper wins!";
+        } else {
+            return "Scissors wins!";
+        }
+
     }
 }
-console.log(rockPaperScissors())
 
-function rockpapascis(option) {
-    if (Math.random() < .3333 < )
-}
+compare(userChoice, computerChoice);
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
