@@ -14,10 +14,13 @@ if (myAge !== yourAge) {
 let year = "1999";
 console.log(Number(year));
 //Task d: Write a function to multiply a*b 
+let num1 = 2;
+let num2 = 5;
 
-
-
-
+function myFunction(a, b) {
+    return a * b;
+};
+console.log(myFunction(num1, num2));
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
