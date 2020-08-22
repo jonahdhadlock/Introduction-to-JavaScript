@@ -127,7 +127,21 @@ console.log(inches + " inches.");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+let number = 99;
+let decrease = -1;
 
+function annoyingSong(number, decrease) {
+    if (number) {
+        return number + " bottles of soda on the wall! 99 bottles of soda!";
+    }
+};
+
+function annoyingSong(number, decrease) {
+    if (number + decrease) {
+        return "Take one down, pass it around! " + number + decrease + " bottles of soda on the wall!";
+    }
+}
+console.log(annoyingSong(number, decrease) + " bottles of soda, take one down, pass it around,");
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade 
@@ -156,8 +170,6 @@ function finalGrade(yourGrade) {
 
 console.log("You earned a(n) " + finalGrade(yourGrade));
 
-
-
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
@@ -166,3 +178,4 @@ console.log("You earned a(n) " + finalGrade(yourGrade));
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Scissors further
 //update your rock papers scissors code below to take a prompt from a user using the window object
+//Completed!
