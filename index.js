@@ -133,14 +133,14 @@ function annoyingSong() {
     for (i = 99; i >= 1; i--) {
         if (i == 1) {
             sodaBottles = "bottle";
-            remainingBottles = "No bottles of soda on the wall!";
+            remainingBottles = "no bottles of soda on the wall!";
         } else {
             sodaBottles = "bottles";
             remainingBottles = i - 1 + " bottles of soda on the wall!";
         }
         console.log(i + " " + sodaBottles + " of soda on the wall,");
         console.log(i + " " + sodaBottles + " of soda,");
-        console.log("Take one down, pass it around,");
+        console.log("take one down, pass it around,");
         console.log(remainingBottles);
     }
 
