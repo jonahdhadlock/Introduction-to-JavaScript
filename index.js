@@ -75,8 +75,21 @@ console.log(dogFeeder(1, 15));
 // Your function should take a string (either rock paper or scissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
-// hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+// hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
+function rockPaperScissors(option) {
+    if (option <= .3333) {
+        return = "Rock";
+    } else if (option >= .3334 <= .6666) {
+        return = "Paper";
+    } else if (option >= .6667) {
+        return = "Scissors";
+    }
+}
+console.log(rockPaperScissors())
 
+function rockpapascis(option) {
+    if (Math.random() < .3333 < )
+}
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
