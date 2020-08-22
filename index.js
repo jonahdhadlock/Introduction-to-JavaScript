@@ -48,7 +48,28 @@ console.log("My age in dog years is " + myFunction(myAge, dogAge));
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-
+function dogFeeder(dogYears, dogWeight) {
+    if (dogYears >= 1) {
+        if (dogWeight > 15) {
+            return dogWeight * .02;
+        } else if (dogWeight >= 11) {
+            return dogWeight * .03;
+        } else if (dogWeight >= 6) {
+            return dogWeight * .04;
+        } else if (dogWeight > 0) {
+            return dogWeight * .05;
+        }
+    } else if (dogYears < 1) {
+        if (dogYears > ((1 / 12) * 7)) {
+            return dogWeight * .04;
+        } else if (dogYears > ((1 / 12) * 4)) {
+            return dogWeight * .05;
+        } else if (dogYears > ((1 / 12) * 2)) {
+            return dogWeight * .1;
+        }
+    }
+}
+console.log(dogFeeder(1, 15));
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Scissors
 // Your function should take a string (either rock paper or scissors)
