@@ -128,12 +128,33 @@ console.log(whoWins(userChoice, computerChoice));
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
-//write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
+//write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade 
 //90s should be A 
 //80s should be B 
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
+const yourGrade = prompt("What is your test score?");
+
+function finalGrade(yourGrade) {
+    if (yourGrade > 100) {
+        return "unreal score!";
+    } else if (yourGrade >= 90) {
+        return "A!";
+    } else if (yourGrade >= 80) {
+        return "B!";
+    } else if (yourGrade >= 70) {
+        return "C!";
+    } else if (yourGrade >= 60) {
+        return "D!";
+    } else if (yourGrade < 60) {
+        return "F!";
+    }
+};
+
+console.log("You earned a(n) " + finalGrade(yourGrade));
+
+
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
@@ -142,4 +163,4 @@ console.log(whoWins(userChoice, computerChoice));
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Scissors further
-//update your rock papers sissors code below to take a prompt from a user using the window object
+//update your rock papers scissors code below to take a prompt from a user using the window object
