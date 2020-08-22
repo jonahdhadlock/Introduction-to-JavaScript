@@ -27,8 +27,8 @@ console.log(myFunction(num1, num2));
 let myAge = 25;
 let dogAge = 7;
 
-function myFunction(a, b) {
-    return a * b;
+function myFunction(myAge, dogAge) {
+    return myAge * dogAge;
 };
 console.log("My age in dog years is " + myFunction(myAge, dogAge));
 /************************************************************** Task 3 **************************************************************/
@@ -127,21 +127,26 @@ console.log(inches + " inches.");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-let number = 99;
-let decrease = -1;
-
-function annoyingSong(number, decrease) {
-    if (number) {
-        return number + " bottles of soda on the wall! 99 bottles of soda!";
+function annoyingSong() {
+    let sodaBottles;
+    let remainingBottles;
+    for (i = 99; i >= 1; i--) {
+        if (i == 1) {
+            sodaBottles = "bottle";
+            remainingBottles = "No bottles of soda on the wall!";
+        } else {
+            sodaBottles = "bottles";
+            remainingBottles = i - 1 + " bottles of soda on the wall!";
+        }
+        console.log(i + " " + sodaBottles + " of soda on the wall,");
+        console.log(i + " " + sodaBottles + " of soda,");
+        console.log("Take one down, pass it around,");
+        console.log(remainingBottles);
     }
-};
 
-function annoyingSong(number, decrease) {
-    if (number + decrease) {
-        return "Take one down, pass it around! " + number + decrease + " bottles of soda on the wall!";
-    }
 }
-console.log(annoyingSong(number, decrease) + " bottles of soda, take one down, pass it around,");
+console.log(annoyingSong());
+//I found ^^this^^ on Medium, and I've studied it in detail, and I'm still not quite sure how it works.
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade 
