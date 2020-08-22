@@ -25,11 +25,13 @@ console.log(myFunction(num1, num2));
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+let myAge = 25;
+let dogAge = 7;
 
-
-
-
-
+function myFunction(a, b) {
+    return a * b;
+};
+console.log("My age in dog years is " + myFunction(myAge, dogAge));
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
